@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Skapa Event</title>
+  <style>
+  
+    html, body { 
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      background-color: #9ab8cc;                           
+    }
+
+    .sidebar {
+      flex: 0 0 240px; 
+      background-color: #2d3748;
+      color: white;
+    }
+
+    .content {
+      flex: 1; 
+      padding: 20px;
+    }
+
+    .content-container {
+      max-width: 800px; 
+      margin: 0 auto;
+    }
+
+    .content-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <ul class="mt-6">
+      <li><a href="Hem.html" class="block text-white py-2">Hem</a></li>
+      <li><a href="allaevent.html" class="block text-white py-2">Alla Event</a></li>
+      <li><a href="skapaevent.html" class="block text-white py-2">Skapa Event</a></li>
+      <li><a href="omoss.html" class="block text-white py-2">Om oss</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="content-container"></div>
+    <div class="form-container">
+      <h1 class="text-2xl mb-6 text-center">Skapa ett nytt event</h1>
+      <form>
+        <div class="form-group">
+          <label for="event-name" class="block mb-2">Namn på event</label>
+          <input type="text" id="event-name" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+  
+        <div class="form-group">
+          <label for="event-date" class="block mb-2">Datum</label>
+          <input type="date" id="event-date" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+  
+        <div class="form-group">
+          <label for="event-description" class="block mb-2">Kort beskrivning</label>
+          <textarea id="event-description" class="w-full p-2 border border-gray-300 rounded"></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label for="event-agenda" class="block mb-2">Agenda</label>
+          <textarea id="event-agenda" class="w-full p-2 border border-gray-300 rounded"></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label for="event-images" class="block mb-2">Ladda upp bilder (max 4)</label>
+          <input type="file" id="event-images" accept="image/*" multiple class="w-full">
+        </div>
+  
+        <div class="form-group">
+          <label for="event-category" class="block mb-2">Kategori</label>
+          <select id="event-category" class="w-full p-2 border border-gray-300 rounded">
+            <option value="nöje">Nöje</option>
+            <option value="utbildning">Utbildning</option>
+            <option value="afterwork">Afterwork</option>
+          </select>
+        </div>
+  
+        <button type="submit" class="block w-full p-2 bg-blue-500 text-white font-bold rounded">Skapa Event</button>
+      </form>
+    </div>
+  </body>
+  </html>
